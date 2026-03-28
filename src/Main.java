@@ -16,8 +16,8 @@ public class Main {
             System.out.println("7. Delete Expense");
             System.out.println("8. Exit");
 
+            System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
-            sc.nextLine(); // consume newline
 
             switch (choice) {
                 case 1:
