@@ -81,4 +81,24 @@ public class ExpenseManager {
     public void setExpenses(ArrayList<Expense> expenses) {
         this.expenses = expenses;
     }
+    public void deleteExpense(int index) {
+        if (index < 0 || index >= expenses.size()) {
+            System.out.println("Invalid expense number.");
+            return;
+        }
+
+        Expense removed = expenses.remove(index);
+        System.out.println("Deleted expense: " + removed);
+    }
+    public void viewExpensesWithIndex() {
+        if (expenses.isEmpty()) {
+            System.out.println("No expenses recorded yet.");
+            return;
+        }
+
+    System.out.println("\n--- All Expenses ---");
+        for (int i = 0; i < expenses.size(); i++) {
+            System.out.println((i + 1) + ". " + expenses.get(i));
+        }
+    }
 }

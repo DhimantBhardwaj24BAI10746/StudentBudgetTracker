@@ -7,15 +7,14 @@ public class Main {
         manager.setExpenses(FileHandler.loadExpenses());
 
         while (true) {
-            System.out.println("\n===== Student Budget Tracker =====");
             System.out.println("1. Add Expense");
             System.out.println("2. View All Expenses");
             System.out.println("3. View Total Spent");
             System.out.println("4. Set Monthly Budget");
             System.out.println("5. View Budget Status");
             System.out.println("6. Search Expense by Category");
-            System.out.println("7. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println("7. Delete Expense");
+            System.out.println("8. Exit");
 
             int choice = sc.nextInt();
             sc.nextLine(); // consume newline
@@ -64,6 +63,16 @@ public class Main {
                     break;
 
                 case 7:
+                    manager.viewExpensesWithIndex();
+                    if (!manager.getExpenses().isEmpty()) {
+                        System.out.print("Enter expense number to delete: ");
+                        int deleteIndex = sc.nextInt();
+                        sc.nextLine();
+                        manager.deleteExpense(deleteIndex - 1);
+                    }
+                    break;
+
+                case 8:
                     FileHandler.saveExpenses(manager.getExpenses());
                     System.out.println("Exiting... Thank you for using Student Budget Tracker!");
                     sc.close();
