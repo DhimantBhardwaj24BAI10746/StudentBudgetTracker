@@ -57,6 +57,7 @@ public class Main {
                     break;
 
                 case 6:
+                    sc.nextLine();
                     System.out.print("Enter category to search: ");
                     String searchCategory = sc.nextLine();
                     manager.searchByCategory(searchCategory);
