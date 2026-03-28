@@ -21,6 +21,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    sc.nextLine();
                     System.out.print("Enter date (DD-MM-YYYY): ");
                     String date = sc.nextLine();
 
