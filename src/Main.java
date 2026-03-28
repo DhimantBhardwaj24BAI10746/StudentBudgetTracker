@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ExpenseManager manager = new ExpenseManager();
+        manager.setExpenses(FileHandler.loadExpenses());
 
         while (true) {
             System.out.println("\n===== Student Budget Tracker =====");
@@ -63,6 +64,7 @@ public class Main {
                     break;
 
                 case 7:
+                    FileHandler.saveExpenses(manager.getExpenses());
                     System.out.println("Exiting... Thank you for using Student Budget Tracker!");
                     sc.close();
                     return;
