@@ -38,18 +38,18 @@ The purpose of this project is to provide a simple and user-friendly solution fo
 ---
 
 ## Project Structure
+
+```text
 StudentBudgetTracker/
-│
 ├── data/
-│ └── expenses.txt
-│
+│   └── expenses.txt
 ├── src/
-│ ├── Expense.java
-│ ├── ExpenseManager.java
-│ ├── FileHandler.java
-│ └── Main.java
-│
+│   ├── Expense.java
+│   ├── ExpenseManager.java
+│   ├── FileHandler.java
+│   └── Main.java
 └── README.md
+```
 
 ---
 
@@ -113,9 +113,9 @@ Through this project, I learned:
 
 ## Author
 
-Dhimant Bhardwaj
-24BAI10746
-B.Tech in CSE (AIML) 2nd year Student
-Programming in Java - BYOP Vityarthi Project
+- Dhimant Bhardwaj
+- 24BAI10746
+- B.Tech in CSE (AIML) 2nd year Student
+- Programming in Java - BYOP Vityarthi Project
 
 ---
